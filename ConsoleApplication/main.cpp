@@ -1,10 +1,28 @@
 #include <iostream>
 #include "Exercice.h"
 #include "Solution1.h"
+#include "Solution3.h"
 
 #ifndef AUTOGRADING
 #include "StudentConfiguration.h"
 #endif
+
+void printSortedWords(const std::vector<std::string>& words, const std::string& setName)
+{
+	Solution3 solution;
+	solution.SetWords(words);
+	solution.SortWords();
+
+	std::vector<std::string> sortedWords = solution.GetSortedWords();
+
+	std::cout << "Sorted Words for Set " << setName << ":" << std::endl;
+	for (const std::string& word : sortedWords)
+	{
+		std::cout << word << std::endl;
+	}
+
+	std::cout << std::endl;
+}
 
 int main(int argc, char** argv)
 {
@@ -38,8 +56,20 @@ int main(int argc, char** argv)
 	float convertedValue5 = Solution1::ConvertTemperature(62.02f, TemperatureUnits::FAHRENHEIT, TemperatureUnits::CELSIUS);
 	std::cout << "Converted value: " << convertedValue5 << std::endl;
 
-	return 0;
+	
 
+	//Exo 3 
+
+	std::vector<std::string> Set1 = { "Hello", "World", "This", "Is", "A", "Test" };
+	std::vector<std::string> Set2 = { "prepare", "big", "Baby", "during", "article", "Left", "community", "war", "choice", "ten", "doctor", "main", "trouble", "involve", "main", "part", "area", "agency", "Water", "Raise" };
+
+	// Print sorted words for Set1
+	printSortedWords(Set1, "1");
+
+	// Print sorted words for Set2
+	printSortedWords(Set2, "2");
+
+	return 0;
 	/*------------------------------------ STUDENT MAIN ------------------------------------*/
 	/*------------------------------ !!! Don't touch after !!! ------------------------------*/
 
