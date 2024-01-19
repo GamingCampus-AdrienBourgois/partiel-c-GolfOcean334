@@ -41,6 +41,7 @@ int main(int argc, char** argv)
 	ExerciceBase::AutograderRunTest(0, 1);
 
 	//EXO 1 
+	std::cout << std::endl;
 	float convertedValue1 = Solution1::ConvertTemperature(71.97f, TemperatureUnits::KELVIN, TemperatureUnits::CELSIUS);
 	std::cout << "Converted value: " << convertedValue1 << std::endl;
 
@@ -55,6 +56,8 @@ int main(int argc, char** argv)
 
 	float convertedValue5 = Solution1::ConvertTemperature(62.02f, TemperatureUnits::FAHRENHEIT, TemperatureUnits::CELSIUS);
 	std::cout << "Converted value: " << convertedValue5 << std::endl;
+
+	std::cout << std::endl;
 
 	
 
